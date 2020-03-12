@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node -r ts-node/register src",
     "start-dev": "ts-node-dev --respawn --transpileOnly --inspect -- src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "MOCHAWESOME_REPORTDIR=test-results nyc mocha -r ts-node/register --reporter mochawesome --exit test/**/*.ts"
   },
   "keywords": [],
   "author": "Joachim Schirrmacher",
@@ -21,6 +21,14 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
+    "@types/mocha": "^7.0.2",
+    "@types/supertest": "^2.0.8",
+    "mocha": "^7.1.0",
+    "mocha-typescript": "^1.1.17",
+    "mochawesome": "^5.0.0",
+    "nyc": "^15.0.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
     "ts-node-dev": "^1.0.0-pre.44"
   }
 }

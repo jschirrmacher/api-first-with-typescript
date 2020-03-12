@@ -12,3 +12,9 @@
     - Create am Open API version 3 file
     - Create an `api_ui.ts` file to serve the Swagger UI
     - Import to `index.ts`
+
+3. Add test environment
+    - `npm i -D mocha mocha-typescript @types/mocha mochawesome should supertest @types/supertest nyc`
+    - Refactor `index.ts` to make the server more easily testable
+    - Add a simple test
+    - Make it callable via `package.json`
