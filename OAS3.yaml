@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: API First TypeScript demo
+  version: "0.1"
+  description: API First TypeScript demo
+  contact:
+    email: joachim.schirrmacher@deutschebahn.com
+  license:
+    name: Apache 2.0
+servers:
+  - url: ""
+    description: local
+components:
+  schemas:
+paths:
+  /:
+    get:
+      description: Hello world route
+      responses:
+        "200":
+          description: The text 'Hello World!'
