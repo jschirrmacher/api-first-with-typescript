@@ -26,3 +26,8 @@
     - `npm i -S express-openapi`
     - Call express-openapi in `src/Server.ts`
     - Adapt tests
+
+5. Extend API
+    - Add parameter to Open API
+    - Define test
+    - Implement operation

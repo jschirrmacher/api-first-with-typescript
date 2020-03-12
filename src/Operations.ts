@@ -2,8 +2,9 @@ import { Request, Response } from "express";
 
 export default {
     helloWorld: (req: Request, res: Response) => {
+        const name = req.query.username || 'World'
         res.json({
-            greeting: 'Hello World!'
+            greeting: `Hello ${name}!`
         })
     }
 }

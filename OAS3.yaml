@@ -22,11 +22,22 @@ components:
           nullable: false
           pattern: 'Hello [A-Z]\w*!'
 
+  parameters:
+    username:
+      name: username
+      in: query
+      description: The user's name
+      required: false
+      schema:
+        type: string
+
 paths:
   /:
     get:
       description: Hello world route
       operationId: helloWorld
+      parameters:
+        - $ref: "#/components/parameters/username"
       responses:
         "200":
           description: Get data structure containing a greeting text

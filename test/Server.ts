@@ -2,11 +2,19 @@ import 'should'
 import supertest from 'supertest'
 import Server from '../src/Server'
 
+const request = supertest.agent(Server)
+
 describe('Server', () => {
-    it('should run and answer on `GET /`', async () => {
-        const request = supertest.agent(Server)
-        const response = await request.get('/')
-        response.status.should.equal(200)
-        response.body.should.deepEqual({greeting: 'Hello World!'})
+    describe('GET /', () => {
+        it('should run and answer', async () => {
+            const response = await request.get('/')
+            response.status.should.equal(200)
+            response.body.should.deepEqual({ greeting: 'Hello World!' })
+        })
+
+        it('should take the username from the query', async () => {
+            const response = await request.get('/?username=Joachim')
+            response.body.greeting.should.equal('Hello Joachim!')
+        })
     })
 })
