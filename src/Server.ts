@@ -1,10 +1,14 @@
 import express from 'express'
 import ApiUI from './api-ui'
+import { initialize } from 'express-openapi'
+import operations from './Operations'
 
 const app = express()
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+initialize({
+    apiDoc: 'OAS3.yaml',
+    app,
+    operations
 })
 ApiUI(app)
 

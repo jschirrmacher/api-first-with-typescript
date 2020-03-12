@@ -7,6 +7,6 @@ describe('Server', () => {
         const request = supertest.agent(Server)
         const response = await request.get('/')
         response.status.should.equal(200)
-        response.text.should.equal('Hello World!')
+        response.body.should.deepEqual({greeting: 'Hello World!'})
     })
 })

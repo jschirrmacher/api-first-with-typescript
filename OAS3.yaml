@@ -8,14 +8,29 @@ info:
   license:
     name: Apache 2.0
 servers:
-  - url: ""
+  - url: "/"
     description: local
+
 components:
   schemas:
+    greeting:
+      description: The data structure used by the hello world route
+      type: object
+      properties:
+        greeting:
+          type: string
+          nullable: false
+          pattern: 'Hello [A-Z]\w*!'
+
 paths:
   /:
     get:
       description: Hello world route
+      operationId: helloWorld
       responses:
         "200":
-          description: The text 'Hello World!'
+          description: Get data structure containing a greeting text
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/greeting"

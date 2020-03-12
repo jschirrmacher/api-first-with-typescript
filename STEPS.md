@@ -18,3 +18,11 @@
     - Refactor `index.ts` to make the server more easily testable
     - Add a simple test
     - Make it callable via `package.json`
+
+4. Bind OpenAPI to implementation
+    - Define a schema in Open API
+    - `npm i -D dtsgenerator`
+    - Define and use `package.json` script to generate types from OAS3
+    - `npm i -S express-openapi`
+    - Call express-openapi in `src/Server.ts`
+    - Adapt tests
