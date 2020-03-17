@@ -31,3 +31,8 @@
     - Add parameter to Open API
     - Define test
     - Implement operation
+
+6. Add another route (API first)
+    - Create a POST route in OAS3 with parameter and result schema
+    - Add a test case
+    - Create an operation in Operations.ts

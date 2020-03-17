@@ -6,5 +6,11 @@ export default {
         res.json({
             greeting: `Hello ${name}!`
         })
+    },
+
+    getAnswer: (req: Request, res: Response) => {
+        res.json({
+            answer: 'I don\'t know'
+        })
     }
 }

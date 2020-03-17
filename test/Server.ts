@@ -17,4 +17,19 @@ describe('Server', () => {
             response.body.greeting.should.equal('Hello Joachim!')
         })
     })
+
+    describe('POST /', () => {
+        it('should return an answer', async () => {
+            const response = await request.post('/?question=' + encodeURIComponent('What time is it?'))
+            response.status.should.equal(200)
+            response.body.should.deepEqual({answer: 'I don\'t know'})
+        })
+
+        it('should require a question parameter', async () => {
+            const response = await request.post('/')
+            response.status.should.equal(400)
+            response.body.should.have.property('errors')
+            response.body.errors[0].message.should.equal('should have required property \'question\'')
+        })
+    })
 })

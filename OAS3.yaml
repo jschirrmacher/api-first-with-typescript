@@ -21,6 +21,13 @@ components:
           type: string
           nullable: false
           pattern: 'Hello [A-Z]\w*!'
+    answer:
+      description: the answer
+      type: object
+      properties:
+        answer:
+          type: string
+          nullable: false
 
   parameters:
     username:
@@ -28,6 +35,13 @@ components:
       in: query
       description: The user's name
       required: false
+      schema:
+        type: string
+    question:
+      name: question
+      in: query
+      description: question
+      required: true
       schema:
         type: string
 
@@ -45,3 +59,16 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/greeting"
+    post:
+      description: Send question
+      operationId: getAnswer
+      parameters:
+        - $ref: "#/components/parameters/question"
+      responses:
+        "200":
+          description: ask a question
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/answer"
+                
