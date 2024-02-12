@@ -8,5 +8,6 @@ With [these 6 steps](STEPS.md), you'll see how to set up a Typescript project wh
 - Fully unit tested
 - Implementation is kept up-to-date with the Open API spec even after changes
 
-Find the full walkthrough tutorial video here:
-https://video.hardlimit.com/w/1Wo3LFsyL3vzb57mdym4S1
+See the full walkthrough tutorial video (audio in german):
+
+<iframe title="API First mit TypeScript" width="560" height="315" src="https://video.hardlimit.com/videos/embed/0797c041-6324-4a51-929c-aed7f50f7360" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
