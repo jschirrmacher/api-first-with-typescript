@@ -10,4 +10,4 @@ With [these 6 steps](STEPS.md), you'll see how to set up a Typescript project wh
 
 See the full walkthrough tutorial video (audio in german):
 
-<iframe title="API First mit TypeScript" width="560" height="315" src="https://video.hardlimit.com/videos/embed/0797c041-6324-4a51-929c-aed7f50f7360" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
+[<img width="800" alt="API First With Type Script" src="https://github.com/jschirrmacher/api-first-with-typescript/assets/2821879/ecf05184-4ee4-49d3-9b84-ee8092aadebb">](https://video.hardlimit.com/w/1Wo3LFsyL3vzb57mdym4S1)
